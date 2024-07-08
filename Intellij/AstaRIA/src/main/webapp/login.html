@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/utils.js" charset="utf-8" defer></script>
+    <script src="js/loginHandler.js" charset="utf-8" defer></script>
+    <title>Login page</title>
+</head>
+<body class="centeredBody">
+
+<div>
+
+    <div id="containerLogin">
+        <form action="#" method="POST">
+            <table>
+                <tbody>
+                <tr>
+                    <td colspan="3" class="loginTitle">Sing-in</td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="label">Username:</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <input id="input_username" type="text" name="username" required="">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="label">Password:</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <input id="input_password" type="password" name="password" required="">
+                    </td>
+                </tr>
+                <tr>
+                    <td width="33%"></td>
+                    <td> <input id="login_button" type="submit" value="Login">
+                    </td><td width="33%"></td>
+                </tr>
+                </tbody>
+            </table>
+            <div id="error_message_div" class="errorContainerClass">
+                <span id="error_message_span" class="errorSpan"></span>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

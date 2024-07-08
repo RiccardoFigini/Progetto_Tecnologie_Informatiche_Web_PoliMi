@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{/css/style.css}">
+<body>
+
+<div class = "container">
+<aside>
+	<aside>
+			<div>
+				<span class="textspan"><a href="GoToHome">Home</a></span><br>
+				<span class="textspan" th:text="'Actual user: ' + ${username}"></span><br>
+				<span class="textspan" th:text="'Time login: ' + ${timeLogin}"></span><br>
+				<span class="textspan"><a href="DoLogout">Logout</a></span><br>
+			</div>
+	</aside>
+		</aside>
+	<div class="displayable">
+		<table class="styled-table">
+			<tbody style="max-height:none;">
+				<tr>
+					<td colspan=2>
+						<img th:src="@{/GetImage(articleID=${article.getCode()})}"/>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Minimum Price: 
+					</td>
+					<td th:text="${article.getMinimumPrice()}">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Code: 
+					</td>
+					<td th:text="${article.getCode()}">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Name: 
+					</td>
+					<td th:text="${article.getName()}">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Description: 
+					</td>
+					<td th:text="${article.getDescription()}">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Owner: 
+					</td>
+					<td th:text="${Owner}">
+					</td>
+				</tr>
+				<tr>
+					<td colspan=2>
+					<form action="GoToAuctionOffer" method=POST>
+					<input value="Back" type="submit" name="back" > <input type="hidden" name="auctionId" th:value="${auctionId}"></form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+	</div>
+	
+	</div>
+</body>
+</html>

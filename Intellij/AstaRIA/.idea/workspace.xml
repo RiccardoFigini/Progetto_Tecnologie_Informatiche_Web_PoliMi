@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="AstaRIA:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1be3e32a-2b7f-4915-ae0c-ef5ae83e5571" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../AstaPureHTML/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AstaPureHTML/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/Dao/OfferDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/Dao/OfferDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AstaRIA-1.0-SNAPSHOT/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/AstaRIA-1.0-SNAPSHOT/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/AstaRIA-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/AstaRIA-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QTGCsDSV2xu8fEYFTskmIb60Jw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Francesco/Desktop/Asta/Intellij/AstaRIA&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.Controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/jsLo" />
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.Controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.73">
+    <configuration name="All in AstaRIA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AstaRIA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in AstaRIA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AstaRIA" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.73" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.73" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="AstaRIA:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/AstaRIA_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="acee0dac-d435-48e2-8ff0-75b272bdf316" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="39995" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="AstaRIA:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.All in AstaRIA" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.73" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in AstaRIA" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1be3e32a-2b7f-4915-ae0c-ef5ae83e5571" name="Changes" comment="" />
+      <created>1685370034145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685370034145</updated>
+      <workItem from="1685370035364" duration="1515000" />
+      <workItem from="1685372772570" duration="2967000" />
+      <workItem from="1685376076623" duration="357000" />
+      <workItem from="1685377111136" duration="980000" />
+      <workItem from="1685378665151" duration="19365000" />
+      <workItem from="1685427466060" duration="11000" />
+      <workItem from="1685468559646" duration="11953000" />
+      <workItem from="1685484936350" duration="519000" />
+      <workItem from="1685541947827" duration="20000" />
+      <workItem from="1685554644391" duration="16111000" />
+      <workItem from="1685886937201" duration="19195000" />
+      <workItem from="1685987538755" duration="4972000" />
+      <workItem from="1685994202583" duration="6644000" />
+      <workItem from="1686054157297" duration="5000" />
+      <workItem from="1686054195112" duration="7000" />
+      <workItem from="1686078741746" duration="9859000" />
+      <workItem from="1686120850948" duration="1804000" />
+      <workItem from="1686123395475" duration="1006000" />
+      <workItem from="1686127409384" duration="7203000" />
+      <workItem from="1686145172764" duration="17000" />
+      <workItem from="1686151576315" duration="8677000" />
+      <workItem from="1686160904887" duration="2054000" />
+      <workItem from="1686164614125" duration="10000" />
+      <workItem from="1686167484683" duration="2777000" />
+      <workItem from="1686171106764" duration="1295000" />
+      <workItem from="1686251953135" duration="10945000" />
+      <workItem from="1686291880611" duration="4240000" />
+      <workItem from="1686379179357" duration="5868000" />
+      <workItem from="1686385068662" duration="127000" />
+      <workItem from="1686636935695" duration="102000" />
+      <workItem from="1686677314279" duration="6813000" />
+      <workItem from="1686685548169" duration="24000" />
+      <workItem from="1686686029042" duration="3947000" />
+      <workItem from="1687187829395" duration="3208000" />
+      <workItem from="1687192079247" duration="1049000" />
+      <workItem from="1687262579217" duration="8904000" />
+      <workItem from="1687273182931" duration="1904000" />
+      <workItem from="1687275118755" duration="1821000" />
+      <workItem from="1687277595555" duration="5000" />
+      <workItem from="1687350770475" duration="6793000" />
+      <workItem from="1687360495834" duration="3147000" />
+      <workItem from="1687374380267" duration="813000" />
+      <workItem from="1687441089204" duration="6165000" />
+      <workItem from="1687447352703" duration="5000" />
+      <workItem from="1687462934491" duration="2780000" />
+      <workItem from="1687503595768" duration="68000" />
+      <workItem from="1687505961931" duration="3926000" />
+      <workItem from="1687514540652" duration="6000" />
+      <workItem from="1687522134930" duration="534000" />
+      <workItem from="1687523187020" duration="19000" />
+      <workItem from="1687530102166" duration="607000" />
+      <workItem from="1687598011792" duration="14000" />
+      <workItem from="1687598281309" duration="648000" />
+      <workItem from="1687610141361" duration="35000" />
+      <workItem from="1687604785169" duration="1433000" />
+      <workItem from="1687614231045" duration="15336000" />
+      <workItem from="1687632732000" duration="63000" />
+      <workItem from="1687677826861" duration="4910000" />
+      <workItem from="1687682766595" duration="3117000" />
+      <workItem from="1687687096932" duration="2008000" />
+      <workItem from="1687699732651" duration="1210000" />
+      <workItem from="1687716421167" duration="84000" />
+      <workItem from="1687782530634" duration="6006000" />
+      <workItem from="1687873863621" duration="2890000" />
+      <workItem from="1687881931595" duration="2025000" />
+      <workItem from="1687884068643" duration="4000" />
+      <workItem from="1687896216088" duration="661000" />
+      <workItem from="1687939390734" duration="6663000" />
+      <workItem from="1687958286825" duration="914000" />
+      <workItem from="1687961333317" duration="1404000" />
+      <workItem from="1687963890187" duration="8000" />
+      <workItem from="1687965426867" duration="941000" />
+      <workItem from="1688045889865" duration="6458000" />
+      <workItem from="1688054735329" duration="9000" />
+      <workItem from="1688077008032" duration="40000" />
+      <workItem from="1688077305427" duration="41000" />
+      <workItem from="1688077353322" duration="4000" />
+      <workItem from="1688077854119" duration="103000" />
+      <workItem from="1688103868326" duration="1580000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Controller/CloseAuctionServlet.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Controller/CloseAuctionServlet.java</url>
+          <line>42</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Controller/GoToAuctionOffer.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Controller/GoToAuctionOffer.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/Controller/MakeAOffer.java</url>
+          <line>50</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

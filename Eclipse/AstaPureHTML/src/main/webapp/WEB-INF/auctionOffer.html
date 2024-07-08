@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Offer Page</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>
+<div class="container">
+
+	<h2 th:text="'Offer Section. Minimun Rise: ' + ${minimumRise} + ', Actual offer: ' + ${actualOffer} " ></h2>
+
+
+	<div class="displayable">
+	<form action="MakeAOffer" method="POST" class="styled-form-table">
+		<input type="number" step=any name="offer" placeholder="Insert your offer" required>  <input type="submit" value="Make"> <input type="hidden" value="${auctionId}"> 
+		<input type="hidden" name="auctionId" th:value="${auctionId}">
+		<div th:if="${errorMessage != null}" class="displayable" id="errorContainer" ><span class="errorSpan" th:text="${errorMessage}"></span></div>
+	</form> 
+	</div>
+	
+	
+	<div class="displayable">
+	<aside>
+			<div>
+				<span class="textspan"><a href="GoToHome">Home</a></span><br>
+				<span class="textspan" th:text="'Actual user: ' + ${username}"></span><br>
+				<span class="textspan" th:text="'Time login: ' + ${timeLogin}"></span><br>
+				<span class="textspan"><a href="DoLogout">Logout</a></span><br>
+			</div>
+	</aside>
+	<table class="styled-table">
+	<caption>Information about auction:</caption>
+	<thead>
+				<tr>
+					<th>Image</th>
+					<th>Item</th>
+					<th>Description</th>
+					<th>Minimum price</th>
+					<th>KeyWord</th>
+				</tr>
+				</thead>
+			<tbody >
+				<tr th:each="item : ${articles}">
+					<td><a th:href="@{/GetImage(articleID=${item.getCode()})}"> <img style="width:150px; height:150px;" th:src="@{/GetImage(articleID=${item.code})}"/></a></td>
+					<td th:text="${item.getName()}"></td>
+					<td th:text="${item.getDescription()}"></td>
+					<td th:text="${item.getMinimumPrice()}"></td>
+					<td th:text="${item.getKeyWord()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+
+	<div class="displayable">
+	<table class="styled-table">
+			<thead>
+				<tr>
+					<th>Username</th>
+					<th>Date</th>
+					<th>Price</th>
+				</tr>
+				</thead>
+			<tbody >
+			    <tr th:if="${offers.size() == 0}">
+					<td colspan="3">No offer yet</td>
+				</tr>
+				<tr th:each="item : ${offers}">
+					<td th:text="${item.getUserOffer()}"></td>
+					<td th:text="${item.getDatatime()}"></td>
+					<td th:text="${item.getPrice()}"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{/css/style.css}">
+<title>Login page</title>
+</head>
+<body>
+	<div class="container">
+	
+		<aside>
+			<div>
+				<span class="textspan"><a href="GoToHome">Home</a></span><br>
+				<span class="textspan" th:text="'Actual user: ' + ${username}"></span><br>
+				<span class="textspan" th:text="'Time login: ' + ${timeLogin}"></span><br>
+				<span class="textspan"><a href="DoLogout">Logout</a></span><br>
+			</div>
+	   </aside>
+		
+	
+		<div th:if="${errorMsg != null}" id="errorContainer" class="displayable">
+			<span th:text="${errorMsg}" class="errorSpan"></span>
+		</div>
+		
+		<div class="displayable">
+			<div class="descriptionMessage">Open auctions</div>
+			<table class="styled-table">
+				<thead>
+					<tr>
+						<th>[ID] Articles</th>
+						<th>Best offer</th>
+						<th>Offer from</th>
+						<th>Remaining time</th>
+						<th>Start date</th>
+						<th>End date</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+				
+					<tr th:if="${openAuctions == null or #lists.isEmpty(openAuctions)}">
+    					<td colspan="7" style="text-align: center;">No open auctions found</td>
+					</tr>
+					<tr  th:if="${openAuctions != null and (not #lists.isEmpty(openAuctions))}" th:each="auction : ${openAuctions}">
+						<td class="articles-td">
+							<span th:each="item : ${auction.listOfArticle}" th:text=" '[' + ${item.code} + '] '+ ${item.name} "></span>
+						</td>
+						<td  th:text="${auction.maxoffer != null} ? ${auction.maxoffer} : '-----'"></td> 
+						<td  th:text="${auction.usernameOffer != null} ? ${auction.usernameOffer} : '-----'"></td>
+						<td  th:text="${auction.remainingTime}"></td>
+						<td  th:text="${auction.startDate}"></td>
+						<td  th:text="${auction.endDate}"></td>
+						<td>
+							<a th:href="@{/GoToAuctionDetails(ID=${auction.id})}">
+							   	<button class="styled-table-button">Details</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		
+		<div class="displayable">
+			<div class="descriptionMessage">Closed auctions</div>
+			<table class="styled-table">
+				<thead>
+					<tr>
+						<th>[ID] Articles</th>
+						<th>Best offer</th>
+						<th>Offer from</th>
+						<th>Start date</th>
+						<th>End Date</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:if="${closedAuctions == null or #lists.isEmpty(closedAuctions)}">
+	        			<td colspan="6" style="text-align: center;">No closed auctions found</td>
+	    			</tr>
+					<tr  th:if="${closedAuctions != null and (not #lists.isEmpty(closedAuctions))}" th:each="auction : ${closedAuctions}">
+					
+						<td class="articles-td">
+							<span th:each="item : ${auction.listOfArticle}" th:text=" '[' + ${item.code} + '] '+ ${item.name} "></span>
+						</td>
+						<td th:text="${auction.maxOffer != null} ? ${auction.maxOffer} : '-----'"></td> 
+						<td th:text="${auction.usernameOffer != null} ? ${auction.usernameOffer} : '-----'"></td>
+						<td th:text="${auction.startDate}"></td>
+						<td th:text="${ auction.endDate}"></td>
+						<td>
+							<a th:href="@{/GoToAuctionDetails(ID=${auction.id})}">
+							   	<button class="styled-table-button">Details</button>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+			
+		
+		
+		
+		
+		
+		<div class="displayable">
+			<div class="descriptionMessage">Create articles</div>
+            <form action="CreateArticle" method="POST" class="styled-form" enctype="multipart/form-data">
+			    <table class="styled-form-table">
+			        <tbody>
+				        <tr>
+				            <td><label for="name">Article name: </label></td>
+				            <td><input type="text" id="name" name="articleName" placeholder="Insert article name" maxlength="45" required></td>
+				        </tr>
+				        <tr>
+				            <td><label for="price">Minimum price:</label></td>
+				            <td><input type="number" id="price" name="minimumPrice" placeholder="Insert the minimum price for the article" step="0.01" required></td>
+				        </tr>
+				        <tr>
+				            <td><label for="keyword">Key word: </label></td>
+				            <td><input type="text" id="keyword" name="keyWord" placeholder="Type a keyword" maxlength="45" required></td>
+				        </tr>
+				        <tr>
+				            <td><label for="description">Description: </label></td>
+				            <td><textarea id="description" name="description" placeholder="Insert a description" maxlength="450" required ></textarea></td>
+				        </tr>
+				        <tr>
+				            <td><label for="image">Image: </label></td>
+				            <td><input id="image" type="file" name="articleIMG" placeholder="Insert an image" required ></td>
+				        </tr>
+			    	</tbody>
+			    </table>
+			  <input type="submit" value="Insert article">
+			</form>
+        </div>
+        
+        
+		
+		<div class="displayable">
+			<div class="descriptionMessage">Create auctions</div>
+            <form action="CreateAuction" method="POST" class="styled-form">
+	            <table class="styled-form-table"> 
+	                <tbody>
+		                <tr>
+		                    <td><label for="shorter-number-input">Minimum rise: </label></td>
+		                    <td> <input type="number" id="shorter-number-input" name="minimumRise" placeholder="Insert the minimum rise" ></td>
+		                </tr>
+		
+		                <tr>
+		                    <td><label for="start-date">Start date: </label></td>
+		                    <td> <input type="date" id="start-date" name="startDate" required></td>
+		                <td> <span> Note 1: Start date, combined with Start time, must be before End date, combined with End time</span></td></tr>
+		
+		                <tr>
+		                    <td> <label for="start-time">Start time: </label></td>
+		                    <td> <input type="time" id="start-time" name="startTime" required ></td>
+		                <td> <span> Note 2: Start date must be at least equals to today's date, Start time needs to be after today's time of creation </span></td></tr>
+		
+		                <tr>
+		                    <td> <label for="end-date">End date: </label></td>
+		                    <td> <input type="date" id="end-date" name="endDate" required></td>
+		                </tr>
+		
+		                <tr>
+		                    <td> <label for="end-time">End time: </label></td>
+		                    <td>  <input type="time" id="end-time" name="endTime" required ></td>
+		                </tr>
+	                </tbody>
+	            </table>
+				
+				<table class="styled-table">
+						<thead>
+							<tr>
+								<th></th>
+								<th>Code</th>
+								<th>Name</th>
+								<th>Description</th>
+								<th>Minimum price</th>
+								<th>Key Word</th>
+								<th>Image</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:if="${availableArticles == null or #lists.isEmpty(availableArticles)}">
+		    					<td colspan="7" style="text-align: center;">No available articles</td>
+							</tr>
+							<tr th:if="${availableArticles != null and (not #lists.isEmpty(availableArticles))}" th:each="item : ${availableArticles}">
+								<td><input type="checkbox" name="articleCode" th:value="${item.code}"></td>
+								<td><span th:text="${item.code}"></span></td>
+								<td><span th:text="${item.name}"></span></td>
+								<td><span th:text="${item.description}"></span></td>
+								<td><span th:text="${item.minimumPrice}"></span></td>
+								<td><span th:text="${item.keyWord}"></span></td>
+								<td><div class="imageDiv"><img th:src="@{/GetImage(articleID=${item.code})}"/></div></td>
+							</tr>
+						</tbody>
+					</table>
+			
+			  <input type="submit" value="Insert auction">
+			</form>
+        </div>
+	</div>
+</body>
+</html>

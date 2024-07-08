@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/utils.js" charset="utf-8" defer></script>
+    <script src="js/Auction.js" charset="utf-8" defer></script>
+    <title>Login page</title>
+  </head>
+
+<body id="body">
+<div class="container">
+
+    <aside id="aside">
+        <div>
+            <span id="home_link" class="textspan"><a href="#">Home</a></span><br>
+            <span id="side_panel_username" class="textspan"></span><br>
+            <span id="side_panel_timestamp" class="textspan"></span><br>
+            <span id="logout_link" class="textspan"><a href="#">Logout</a></span><br>
+        </div>
+    </aside>
+
+    <div id="error_prompt">
+        <span id="error_title">Error</span>
+        <span id="error_desc"></span>
+        <button id="error_close">Close</button>
+    </div>
+
+    <div id="valid_prompt">
+        <span id="valid_title">Offer Accepted</span>
+        <span id="valid_desc"></span>
+        <button id="valid_close">Close</button>
+    </div>
+
+    <div id="containerHome" style="display: none;">
+        <table>
+            <tbody>
+            <tr>
+                <td id="home__helloMessage" colspan="2" class="helloMessage"></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="presentationMessage">Welcome to the auction manager</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    <form action="#">
+                        <input id="buttonSell" type="submit" value="Sell">
+                    </form>
+                </td>
+                <td>
+                    <form action="#">
+                        <input id="buttonBuy" type="submit" value="Buy">
+                    </form>
+
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="sell" style="display:none;">
+        <div  class="displayable">
+            <div class="descriptionMessage">Open auctions</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>[ID] Articles</th>
+                    <th>Best offer</th>
+                    <th>Offer from</th>
+                    <th>Remaining time</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="sell__open_auction_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable">
+            <div class="descriptionMessage">Closed auctions</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>[ID] Articles</th>
+                    <th>Best offer</th>
+                    <th>Offer from</th>
+                    <th>Start date</th>
+                    <th>End Date</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody id="sell__closed_auction_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable">
+            <div class="descriptionMessage">Create articles</div>
+            <form action="#" method="POST" class="styled-form" enctype="multipart/form-data">
+                <table class="styled-form-table">
+                    <tbody>
+                    <tr>
+                        <td><label for="name">Article name: </label></td>
+                        <td><input type="text" id="name" name="articleName" placeholder="Insert article name" maxlength="45" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="price">Minimum price:</label></td>
+                        <td><input type="number" id="price" name="minimumPrice" placeholder="Insert the minimum price for the article" step="0.01" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="keyword">Key word: </label></td>
+                        <td><input type="text" id="keyword" name="keyWord" placeholder="Type a keyword" maxlength="45" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="description">Description: </label></td>
+                        <td><textarea id="description" name="description" placeholder="Insert a description" maxlength="450" required ></textarea></td>
+                    </tr>
+                    <tr>
+                        <td><label for="image">Image: </label></td>
+                        <td><input id="image" type="file" name="articleIMG" placeholder="Insert an image" required ></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <input id="sell__article_form_submit" type="submit" value="Insert article">
+            </form>
+        </div>
+
+        <div class="displayable">
+            <div class="descriptionMessage">Create auctions</div>
+            <form action="#" method="POST" class="styled-form">
+                <table class="styled-form-table">
+                    <tbody>
+                    <tr>
+                        <td><label for="shorter-number-input">Minimum rise: </label></td>
+                        <td> <input type="number" id="shorter-number-input" name="minimumRise" placeholder="Insert the minimum rise" required ></td>
+                    </tr>
+
+                    <tr>
+                        <td><label for="start-date">Start date: </label></td>
+                        <td> <input type="date" id="start-date" name="startDate" required></td>
+                        <td> <span> Note 1: Start date, combined with Start time, must be before End date, combined with End time</span></td></tr>
+
+                    <tr>
+                        <td> <label for="start-time">Start time: </label></td>
+                        <td> <input type="time" id="start-time" name="startTime" required ></td>
+                        <td> <span> Note 2: Start date must be at least equals to today's date, Start time needs to be after today's time of creation </span></td></tr>
+
+                    <tr>
+                        <td> <label for="end-date">End date: </label></td>
+                        <td> <input type="date" id="end-date" name="endDate" required></td>
+                    </tr>
+
+                    <tr>
+                        <td> <label for="end-time">End time: </label></td>
+                        <td>  <input type="time" id="end-time" name="endTime" required ></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table class="styled-table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Code</th>
+                        <th>Name</th>
+                        <th>Description</th>
+                        <th>Minimum price</th>
+                        <th>Key Word</th>
+                        <th>Image</th>
+                    </tr>
+                    </thead>
+                    <tbody id="sell__auction_form_tbody">
+
+                    </tbody>
+                </table>
+
+                <input id="sell__auction_form_submit" type="submit" value="Insert auction">
+            </form>
+        </div>
+    </div>
+
+    <div id="auct_det" style="display:none;">
+        <div class="displayable">
+            <div class="descriptionMessage">Auction details</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>Auction id</th>
+                    <th>Start price</th>
+                    <th>Minimum rise</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                <tbody id="auct_det__auction_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable">
+            <div class="descriptionMessage">Included articles</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Minimum price</th>
+                    <th>Image</th>
+                </tr>
+                </thead>
+                <tbody id="auct_det__articles_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable" >
+            <div class="descriptionMessage">Received offers</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                </tr>
+                <thead>
+                <tbody id="auct_det__offers_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable" id="auct_det__winner" style="display: none;">
+            <div class="descriptionMessage">Winner details</div>
+            <table class="styled-table">
+                <thead>
+                <tr>
+                    <th>Winner's username</th>
+                    <th>Final price</th>
+                    <th>Shipping address</th>
+                </tr>
+                <thead>
+                <tbody id="auct_det__winner_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="auct_det__closeButton" class="displayable" style="display:none;">
+            <div class="closeAuction">
+                <button id="auct_det__closeButton_submit" class="styled-button">Close auction</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="buy" class="displayable" style="display: none;">
+
+        <div id="recent_visited_auction_div" class="displayable">
+            <table class="styled-table">
+                <caption><span>Auction visited recently (and still open): </span></caption>
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Minimum Price</th>
+                    <th>Minimum Rise offer</th>
+                    <th>User owner</th>
+                    <th>Last offer</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Countdown</th>
+                </tr>
+                </thead>
+                <tbody id="recent_visited_auction_tbody">
+
+                </tbody>
+            </table>
+        </div>
+
+        <div class="displayable" id="div_keyword">
+            <table class="styled-table" >
+                <caption><span>Find a auction</span></caption>
+                <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Minimum Price</th>
+                    <th>Minimum Rise offer</th>
+                    <th>User owner</th>
+                    <th>Last offer</th>
+                    <th>Start date</th>
+                    <th>End date</th>
+                    <th>Countdown</th>
+                </tr>
+                </thead>
+                <tr>
+                    <td colspan="9">
+                        <form action="#" id="keyword_form">
+                            <label for="inputKeyWord"></label>
+                            <input id="inputKeyWord" placeholder="KeyWord to find auctions" type="text" name="keyword" required>
+                            <input type="submit" style="width: 100px; height: 17px;" id="keywordButton" value="Search"><span id="span_keyword"></span>
+                        </form>
+                    </td>
+                </tr>
+                <tbody id="keyword_tbody">
+                </tbody>
+            </table>
+        </div>
+
+        <div id="open_auction_page" class="displayable" style="display: none;" >
+            <div class="displayable" >
+                <table class="styled-table">
+                    <td>
+                        <h1 id="title_auction_details"> </h1>
+                    </td>
+                </table>
+                <div id="auction_information" class="displayable">
+                    <table class="styled-table" >
+                        <thead>
+                        <tr>
+                            <th>Image</th>
+                            <th>Item</th>
+                            <th>Description</th>
+                            <th>Minimum price</th>
+                            <th>KeyWord</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody_auction_information">
+
+                        </tbody>
+                    </table>
+                </div>
+                <div id="auction_offers" class="displayable">
+                    <table class="styled-table" >
+                        <thead>
+                        <tr>
+                            <th>Username</th>
+                            <th>Date</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody id="tbody_auction_offers">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="displayable" style="min-width: 0; width: 500px; margin: auto;">
+                    <table class="styled-table" style="min-width: 0; width: 500px;">
+
+                        <thead>
+                        <tr><th>Make an offer</th></tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td>
+                                <form action="#" id="form_make_a_offer">
+                                    <input id="make_a_offer_input" name="input_offer" type="number" step="any" placeholder="Insert your offer" required="">
+                                    <input type="submit" id="make_a_offer" class="styled-input">
+                                </form>
+                            </td>
+                            <td><input type="submit" id="close_open_auction_page" value="Close section"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="displayable" id="closeAndWonAuction">
+            <table class="styled-table" id="table_closeAndWonAuction">
+                <caption>Won auction</caption>
+                <thead>
+                    <tr>
+                        <th>End Date</th>
+                        <th>Price</th>
+                        <th>Item/s</th>
+                        <th>Description</th>
+                        <th>Minimum price</th>
+                        <th>KeyWord</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody_closeAndWonAuction">
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

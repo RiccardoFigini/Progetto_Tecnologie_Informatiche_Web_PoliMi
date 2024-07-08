@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Buying page</title>
+<link rel="stylesheet" type="text/css" href="../css/style.css" th:href="@{/css/style.css}">
+</head>
+<body>	
+		
+		
+
+		<div class="container">
+		<h1>Buy Section</h1>
+		<aside>
+			<div>
+				<span class="textspan"><a href="GoToHome">Home</a></span><br>
+				<span class="textspan" th:text="'Actual user: ' + ${username}"></span><br>
+				<span class="textspan" th:text="'Time login: ' + ${timeLogin}"></span><br>
+				<span class="textspan"><a href="DoLogout">Logout</a></span><br>
+			</div>
+	    </aside>
+
+		<div class="displayable">
+
+			<div th:if="${errorMsg != null}" id="errorContainer" class="displayable">
+				<span th:text="${errorMsg}" class="errorSpan"></span>
+			</div>
+
+		<table class="styled-table">
+		<caption><span th:text="'Your researches. ' + ${text}" ></span><br></caption>
+			<thead>
+				<tr>
+					<th>Item</th>
+					<th>Minimum Price</th>
+					<th>Minimum Rise offer</th>
+					<th>User owner</th>
+					<th>Last offer</th>
+					<th>Start date</th>
+					<th>End date</th>
+					<th>Countdown</th>
+				</tr>
+			</thead>
+			<tbody >
+				<tr th:if="${listOfAuction == null || listOfAuction.size()==0 }" >
+					<td colspan=8>
+					No auction open
+					</td>
+				</tr>
+				<tr th:each="auction : ${listOfAuction}">
+					<td><p th:each="item : ${auction.getListOfArticle()}" th:text=" '-' +  ${item.getName()} "></p></td>
+					<td th:text="${ auction.getStartPrice() }"></td>
+					<td th:text="${ auction.getMinimumRise() }"></td>
+					<td th:text="${ auction.getUsernameOwner() }"></td>
+					<td><a
+						th:href="@{/GoToAuctionOffer(auctionId=${auction.getId()})}"
+						th:text="${ auction.getMaxOffer() }"> 
+					</a></td> 
+					<td th:text="${ auction.getStartDate() }"></td>
+					<td th:text="${ auction.getEndDate()   }"></td>
+					<td th:text="${ auction.getRemainingTime() }"></td>
+				</tr>				
+				<tr>
+					<td colspan="9">
+						<form action="KeyWordServlet" method="POST" class="styled-form-table">
+							<input placeholder="KeyWord to find auctions" type="text" name="keyword" required><input type="submit" value="Search" >
+						</form>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		
+		
+		<div class="displayable">
+			<table class="styled-table" >
+				<caption>Won auction</caption>
+				<thead>
+				<tr>
+					<th>End Date</th>
+					<th>Price</th>
+					<th>Item/s</th>
+					<th>Description</th>
+					<th>Minimum price</th>
+					<th>KeyWord</th>
+				</tr>
+				</thead>
+				<tbody >
+					<tr th:if="${listOfEndedAuction==null || listOfEndedAuction.size() == 0}">
+						<td colspan=6>No close auction</td>
+					</tr>
+					<tr th:each="auction : ${listOfEndedAuction}">
+						<td  th:text="${ auction.getEndDate()   }"> </td>
+						<td  th:text="${ auction.getMaxOffer() }"></td>
+						<td><p th:each="item : ${auction.getListOfArticle()}" th:text=" '-' +  ${item.getName()} "></p></td>
+						<td><p th:each="item : ${auction.getListOfArticle()}" th:text=" '-' +  ${item.getDescription()} "></p></td>
+						<td><p th:each="item : ${auction.getListOfArticle()}" th:text=" '-' +  ${item.getMinimumPrice()} "></p></td>
+						<td><p th:each="item : ${auction.getListOfArticle()}" th:text=" '-' +  ${item.getKeyWord()} "></p></td>
+					</tr>
+				</tbody>
+		</table>
+		</div>
+		</div>	
+</body>
+</html> 

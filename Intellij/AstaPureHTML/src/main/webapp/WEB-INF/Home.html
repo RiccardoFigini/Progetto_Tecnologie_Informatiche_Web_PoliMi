@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home page
+		</title>
+		<link rel="stylesheet" type="text/css" href="src/main/webapp/css" th:href="@{/css/style.css}">
+	</head>
+<body class="centeredBody">
+
+	<aside>
+			<div>
+				<span class="textspan"><a href="GoToHome">Home</a></span><br>
+				<span class="textspan" th:text="'Actual user: ' + ${username}"></span><br>
+				<span class="textspan" th:text="'Time login: ' + ${timeLogin}"></span><br>
+				<span class="textspan"><a href="DoLogout">Logout</a></span><br>
+			</div>
+	</aside>
+
+    <div id="containerHome">
+        <table>
+            <tbody>
+	            <tr>
+	               <td th:text="'Hi ' + ${name} + '!'" colspan="2" class="helloMessage"></td> 
+	            </tr>
+	    		<tr>
+	               <td colspan="2" class="presentationMessage">Welcome to the auction manager</td> 
+	            </tr>
+	            <tr>
+	                <td>
+	                	<form action="GoToSell">
+	   						 <input id="buttonSell" type="submit" value="Sell">
+						</form>
+					</td>
+	            	<td>
+	            		<form action="GoToBuy">
+				    		<input id="buttonBuy" type="submit" value="Buy">
+						</form>
+	
+					</td>
+	            </tr>
+       		</tbody>
+       </table>
+    </div>
+	<div th:if="${errorMsg != null}" id="errorContainer" class="displayable">
+		<span th:text="${errorMsg}" class="errorSpan"></span>
+	</div>
+</body>
+</html>
