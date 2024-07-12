@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" version="4.0">
+  <display-name>ProgettoTIW</display-name>
+  <context-param>
+    <param-name>dbUrl</param-name>
+    <param-value>jdbc:mysql://localhost:3306/tiw_project?serverTimezone=UTC</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbUser</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbPassword</param-name>
+    <param-value>root</param-value>
+  </context-param>
+  <context-param>
+    <param-name>dbDriver</param-name>
+    <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <welcome-file-list>
+    <welcome-file>login.html</welcome-file>
+  </welcome-file-list>
+
+
+
+  <filter>
+    <filter-name>Checker</filter-name>
+    <filter-class>filters.Checker</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>Checker</filter-name>
+    <url-pattern>/CloseAuction</url-pattern>
+    <url-pattern>/CreateArticle</url-pattern>
+    <url-pattern>/CreateAuction</url-pattern>
+    <url-pattern>/GoToAuctionDetails</url-pattern>
+    <url-pattern>/GoToAuctionOffer</url-pattern>
+    <url-pattern>/GoToBuy</url-pattern>
+    <url-pattern>/GoToHome</url-pattern>
+    <url-pattern>/GoToSell</url-pattern>
+    <url-pattern>/KeyWordServlet</url-pattern>
+    <url-pattern>/MakeAOffer</url-pattern>
+    <url-pattern>/GoToArticleDetails</url-pattern>
+  </filter-mapping>
+
+
+
+</web-app>
