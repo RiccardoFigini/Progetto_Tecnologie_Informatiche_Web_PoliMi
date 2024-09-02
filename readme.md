@@ -1,5 +1,5 @@
 ## Progetto Tecnologie Infromatiche per il Web
-QUesta è la repository che comprende il progetto del corso di Tecnologie Informatiche per il Web, anno 2022/23 del Politecnico di Milano.
+Questa è la repository che comprende il progetto del corso di Tecnologie Informatiche per il Web, anno 2022/23 del Politecnico di Milano.
 
 ## Struttura della repository
 - Project Delivery: Cartella in cui è presente il PDF contenente la traccia del progetto.
