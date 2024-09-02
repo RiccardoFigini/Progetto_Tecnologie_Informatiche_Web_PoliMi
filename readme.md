@@ -1,4 +1,4 @@
-## Progetto Tecnologie Infromatiche per il Web
+## Progetto Tecnologie Infromatiche per il Web - a.a - 2022 - 2023
 Questa è la repository che comprende il progetto del corso di Tecnologie Informatiche per il Web, anno 2022/23 del Politecnico di Milano.
 
 ## Struttura della repository
