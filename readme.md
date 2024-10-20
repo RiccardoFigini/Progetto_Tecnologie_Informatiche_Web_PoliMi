@@ -1,5 +1,5 @@
 ## Progetto [Tecnologie Infromatiche per il Web](https://www4.ceda.polimi.it/manifesti/manifesti/controller/ManifestoPublic.do?EVN_DETTAGLIO_RIGA_MANIFESTO=evento&k_corso_la=358&k_indir=IOL&idItemOfferta=160359&idRiga=284630&codDescr=085879&semestre=2&aa=2022&lang=IT&jaf_currentWFID=main) - a.a - 2022 - 2023
-Questa è la repository che comprende il progetto del corso di Tecnologie Informatiche per il Web, anno 2022/23 del Politecnico di Milano.
+Questa è la repository che comprende il progetto del corso di Tecnologie Informatiche per il Web, anno 2022/23 del Politecnico di Milano. Sviluppatori: Francesco Lo Mastro, Riccardo Figini
 
 ## Struttura della repository
 - Project Delivery: Cartella in cui è presente il PDF contenente la traccia del progetto.
